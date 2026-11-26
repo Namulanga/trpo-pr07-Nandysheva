@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/../src/Core/helpers.php';
+require_once __DIR__ . '/../src/Core/View.php';
 require_once __DIR__ . '/../src/Core/Router.php';
 
-header('Content-Type: text/plain; charset=utf-8');
+$view = new View(__DIR__ . '/../views', ['storeName' => 'Учебный магазин']);
 
 $router = new Router(
     [
-        'GET /' => fn() => print("Главная\n"),
-        'GET /catalog' => fn() => print("Каталог\n"),
+        'GET /' => fn() => $view->render('home', ['title' => 'Главная']),
     ],
     function (): void {
         http_response_code(404);
-        echo "Страница не найдена\n";
+        echo 'Страница не найдена';
     }
 );
 
