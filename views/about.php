@@ -1,3 +1,10 @@
+<?php
+$storeName = $storeName ?? 'Мой магазин';
+$tagline = $tagline ?? '';
+$benefits = $benefits ?? [];
+$layers = $layers ?? [];
+?>
+
 <h1>О магазине</h1>
 <p class="lead"><?= e($storeName) ?> — <?= e($tagline) ?>.</p>
 

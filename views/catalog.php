@@ -1,3 +1,8 @@
+
+<?php
+$products = $products ?? [];
+?>
+
 <h1>Каталог</h1>
 
 <?php if ($products === []): ?>
@@ -16,7 +21,14 @@
                 <tr>
                     <td><?= (int) $product['id'] ?></td>
                     <td><?= e($product['name']) ?></td>
-                    <td><?= number_format((float) $product['price'], 0, ',', ' ') ?> ₽</td>
+                    <td>
+                        <?= number_format(
+                            (float) $product['price'],
+                            0,
+                            ',',
+                            ' '
+                        ) ?> ₽
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
