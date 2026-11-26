@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f4f6fb;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main.container {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    min-height: 60vh;
+}
+
+.site-header {
+    background: #111827;
+    color: #ffffff;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+.site-footer {
+    padding: 20px 0;
+    color: #6b7280;
+    font-size: 14px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 16px;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.lead {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #ffffff;
+    background: #315efb;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #2448c9;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.state {
+    padding: 48px 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 16px;
+}
+
+.state-error {
+    border: 1px solid #fca5a5;
+    background: #fef2f2;
+}
+
+.empty {
+    padding: 16px;
+    color: #6b7280;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+}
