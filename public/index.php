@@ -6,15 +6,17 @@ require_once __DIR__ . '/../src/Core/View.php';
 require_once __DIR__ . '/../src/Core/Router.php';
 require_once __DIR__ . '/../src/Model/PageContent.php';
 require_once __DIR__ . '/../src/Controller/HomeController.php';
-
+require_once __DIR__ . '/../src/Controller/CatalogController.php';
 $pages = new PageContent(__DIR__ . '/../data/pages.json');
 $view = new View(__DIR__ . '/../views', ['storeName' => $pages->storeName()]);
 
 $home = new HomeController($view, $pages);
+$catalog = new CatalogController($view);
 
 $router = new Router(
     [
         'GET /' => [$home, 'index'],
+        'GET /catalog' => [$catalog, 'index'],
         'GET /about' => [$home, 'about'],
     ],
     function (): void {

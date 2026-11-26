@@ -1,3 +1,8 @@
+<?php
+$storeName = $storeName ?? 'Мой магазин';
+$title = $title ?? '';
+$content = $content ?? '';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
